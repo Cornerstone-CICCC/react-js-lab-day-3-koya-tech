@@ -14,7 +14,7 @@ function App() {
     return (
         <BlogProvider>
             <BrowserRouter>
-                <Header firstname="YourFirstName" />
+                <Header firstname="koya-tech" />
                 <Toaster />
                 <Routes>
                     <Route path="/" element={<Home />} />

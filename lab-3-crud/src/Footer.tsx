@@ -1,14 +1,7 @@
 export default function Footer() {
     return (
-        <footer
-            style={{
-                textAlign: "center",
-                padding: "1rem",
-                background: "#f5f5f5",
-                marginTop: "2rem",
-            }}
-        >
-            &copy; 2025 Your Name. All rights reserved.
+        <footer className="text-center py-6 bg-gray-100 mt-12 text-gray-500 text-sm border-t">
+            &copy; 2025 koya-tech. All rights reserved.
         </footer>
     );
 }

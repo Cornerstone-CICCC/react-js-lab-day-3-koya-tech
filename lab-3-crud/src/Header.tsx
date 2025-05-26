@@ -7,20 +7,19 @@ type HeaderProps = {
 
 const Header = memo(function Header({ firstname }: HeaderProps) {
     return (
-        <header
-            style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: "1rem",
-                background: "#f5f5f5",
-            }}
-        >
-            <nav style={{ display: "flex", gap: "1rem" }}>
-                <Link to="/">Home</Link>
-                <Link to="/blog">Blog</Link>
+        <header className="flex items-center justify-between px-8 py-4 bg-white shadow-md">
+            <nav className="flex gap-6 text-lg font-medium">
+                <Link to="/" className="hover:text-blue-600 transition-colors">
+                    Home
+                </Link>
+                <Link
+                    to="/blog"
+                    className="hover:text-blue-600 transition-colors"
+                >
+                    Blog
+                </Link>
             </nav>
-            <span style={{ marginLeft: "auto", fontWeight: "bold" }}>
+            <span className="ml-auto font-bold text-blue-700 text-lg">
                 {firstname}
             </span>
         </header>
