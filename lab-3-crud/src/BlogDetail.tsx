@@ -11,24 +11,26 @@ export default function BlogDetail() {
     const blog = blogs.find((b) => b.id === id);
     if (!blog)
         return (
-            <div className="max-w-xl mx-auto mt-10 p-6 bg-white rounded shadow text-center text-gray-400">
+            <div className="max-w-xl mx-auto mt-12 p-8 bg-gradient-to-br from-purple-100 via-yellow-100 to-indigo-100 rounded-2xl shadow-2xl text-center text-indigo-400 font-fantasy border-4 border-yellow-400">
                 Blog not found
             </div>
         );
     return (
-        <div className="max-w-xl mx-auto mt-10 p-8 bg-white rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold mb-2">{blog.title}</h2>
-            <p className="text-gray-700 mb-6 whitespace-pre-line">
+        <div className="max-w-xl mx-auto mt-12 p-10 bg-gradient-to-br from-yellow-100 via-purple-100 to-indigo-100 rounded-2xl shadow-2xl border-4 border-yellow-400 font-fantasy">
+            <h2 className="text-4xl font-extrabold mb-4 text-purple-900 drop-shadow-lg tracking-widest">
+                {blog.title}
+            </h2>
+            <p className="text-lg text-indigo-800 mb-8 whitespace-pre-line tracking-wide drop-shadow-sm">
                 {blog.content}
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-6 justify-center">
                 <Link to={`/blog/edit/${id}`}>
-                    <button className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition">
+                    <button className="px-6 py-2 bg-gradient-to-r from-yellow-500 to-yellow-300 text-purple-900 font-bold rounded-full shadow-lg hover:scale-105 hover:bg-yellow-400 transition-transform border-2 border-yellow-700">
                         Edit
                     </button>
                 </Link>
                 <button
-                    className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition"
+                    className="px-6 py-2 bg-gradient-to-r from-purple-700 to-indigo-700 text-yellow-200 font-bold rounded-full shadow-lg hover:scale-105 hover:bg-purple-800 transition-transform border-2 border-yellow-700"
                     onClick={() => {
                         dispatch({ type: "DELETE", payload: { id: blog.id } });
                         toast.success("Blog deleted");

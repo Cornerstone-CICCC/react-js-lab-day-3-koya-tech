@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+/* @tailwind base; */
+/* @tailwind components; */
+@tailwind utilities;
+
+@layer base {
+    .font-fantasy {
+        font-family: "Cinzel Decorative", "IM Fell English SC", "UnifrakturCook",
+            "Cormorant Garamond", "serif";
+        letter-spacing: 0.05em;
+    }
+}

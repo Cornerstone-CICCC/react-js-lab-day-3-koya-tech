@@ -10,10 +10,12 @@ export default function AddPost() {
     const navigate = useNavigate();
 
     return (
-        <div className="max-w-xl mx-auto mt-10 p-8 bg-white rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-6">Add New Post</h2>
+        <div className="max-w-xl mx-auto mt-12 p-10 bg-gradient-to-br from-yellow-100 via-purple-100 to-indigo-100 rounded-2xl shadow-2xl border-4 border-yellow-400 font-fantasy">
+            <h2 className="text-3xl font-extrabold mb-8 text-purple-900 drop-shadow-lg tracking-widest">
+                Add New Spell
+            </h2>
             <form
-                className="space-y-4"
+                className="space-y-6"
                 onSubmit={(e) => {
                     e.preventDefault();
                     dispatch({
@@ -24,20 +26,20 @@ export default function AddPost() {
                 }}
             >
                 <input
-                    className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    placeholder="Title"
+                    className="w-full border-2 border-yellow-400 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400 bg-yellow-50 text-lg font-fantasy"
+                    placeholder="Spell Title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     required
                 />
                 <textarea
-                    className="w-full border rounded px-3 py-2 h-32 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    placeholder="Content"
+                    className="w-full border-2 border-yellow-400 rounded px-4 py-2 h-32 focus:outline-none focus:ring-2 focus:ring-purple-400 bg-yellow-50 text-lg font-fantasy"
+                    placeholder="Spell Content"
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                     required
                 />
-                <label className="flex items-center gap-2">
+                <label className="flex items-center gap-2 text-purple-900 font-bold">
                     <input
                         type="checkbox"
                         checked={published}
@@ -46,7 +48,7 @@ export default function AddPost() {
                     Published
                 </label>
                 <button
-                    className="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                    className="w-full py-3 bg-gradient-to-r from-yellow-500 to-yellow-300 text-purple-900 font-bold rounded-full shadow-lg hover:scale-105 hover:bg-yellow-400 transition-transform border-2 border-yellow-700 text-xl tracking-widest"
                     type="submit"
                 >
                     Create
